@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // W
+    // {
+    //   "type": "node",
+    //   "request": "launch",
+    //   "name": "Debug App",s
+    //   "program": "${workspaceFolder}/app.ts",
+    //   "outFiles": ["${workspaceFolder}/dist/app.js"],
+    //   "sourceMaps": true,
+    //   "stopOnEntry": true,
+    //   "restart": true,
+    //   "protocol": "inspector"
+    // }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch",
+      "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\nodemon",
+      "runtimeArgs": [
+        "--inspect-brk=localhost:9229",
+        "--watch",
+        "*.ts",
+        "--ignore",
+        "node_modules",
+        "--ignore",
+        ".vscode/",
+        "--ignore",
+        ".git/",
+        "--ignore",
+        "dist/",
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/app.ts",
+        "--pretty",
+        "true",
+        "--files",
+        "true",
+        "--cacheDirectory",
+        "./.ts-node"
+      ],
+      "env": {
+        "TS_NODE_CACHE_DIRECTORY": "${workspaceRoot}/.ts-node"
+      },
+      "restart": true,
+      "sourceMaps": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "triple-equals": true,
+    "no-console": false
+  },
+  "defaultSeverity": "warning"
+}

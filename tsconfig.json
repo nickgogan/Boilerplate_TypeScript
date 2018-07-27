@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "charset": "utf8",
+    "target": "es5",
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "sourceMap": true,
+    "declaration": false,
+    "esModuleInterop": true, // Turns import statements into require's.
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    // "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}
